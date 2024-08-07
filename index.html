@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid - Acceso</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        .form-box h2 {
+            margin-bottom: 15px;
+        }
+        .form-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form-box input, .form-box select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-box button {
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        .form-box button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Formulario de Iniciar Sesión -->
+        <div class="form-box">
+            <h2>Iniciar Sesión</h2>
+            <form action="main.html" method="get">
+                <label for="email-login">Correo Electrónico:</label>
+                <input type="email" id="email-login" name="email" placeholder="Correo Electrónico" required>
+                <label for="password-login">Contraseña:</label>
+                <input type="password" id="password-login" name="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Registrarse -->
+        <div class="form-box">
+            <h2>Registrarse</h2>
+            <form action="main.html" method="get">
+                <label for="name-register">Nombre Completo:</label>
+                <input type="text" id="name-register" name="name" placeholder="Nombre Completo" required>
+                <label for="email-register">Correo Electrónico:</label>
+                <input type="email" id="email-register" name="email" placeholder="Correo Electrónico" required>
+                <label for="password-register">Contraseña:</label>
+                <input type="password" id="password-register" name="password" placeholder="Contraseña" required>
+                <fieldset>
+                    <legend>Género:</legend>
+                    <label><input type="radio" name="gender" value="male" required> Masculino</label>
+                    <label><input type="radio" name="gender" value="female" required> Femenino</label>
+                </fieldset>
+                <label for="favorite-color">Color Favorito:</label>
+                <input type="color" id="favorite-color" name="favoriteColor" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Recuperar Contraseña -->
+        <div class="form-box">
+            <h2>Recuperar Contraseña</h2>
+            <form action="main.html" method="get">
+                <label for="email-recover">Correo Electrónico:</label>
+                <input type="email" id="email-recover" name="email" placeholder="Correo Electrónico" required>
+                <fieldset>
+                    <legend>Preguntas de Seguridad:</legend>
+                    <label for="security-question1">¿Nombre de tu primera mascota?</label>
+                    <input type="text" id="security-question1" name="securityQuestion1" required>
+                    <label for="security-question2">¿Ciudad de nacimiento?</label>
+                    <input type="text" id="security-question2" name="securityQuestion2" required>
+                </fieldset>
+                <button type="submit">Recuperar Contraseña</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Agregar Teléfono -->
+        <div class="form-box">
+            <h2>Agregar Teléfono</h2>
+            <form action="main.html" method="get">
+                <label for="phone-number">Número de Teléfono:</label>
+                <input type="tel" id="phone-number" name="phone" placeholder="Número de Teléfono" required>
+                <fieldset>
+                    <legend>Tipo de Teléfono:</legend>
+                    <label><input type="checkbox" name="phoneType" value="mobile"> Móvil</label>
+                    <label><input type="checkbox" name="phoneType" value="home"> Casa</label>
+                    <label><input type="checkbox" name="phoneType" value="work"> Trabajo</label>
+                </fieldset>
+                <button type="submit">Agregar Teléfono</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
